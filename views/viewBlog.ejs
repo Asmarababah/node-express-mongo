@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="../app.css">
+
+<%- include ('../partials/head.ejs') %>
+
+    <body>
+        <%- include ('../partials/nav.ejs') %>
+
+            <div class="new-blog">
+                <form action="/update-blog/<%= blog.id %>" method="post">
+                    <label for="title"> Blog Title</label>
+                    <input type="text" id="title" name="title" required value="<%= blog.title %>">
+                    <label for="author"> Blog Author</label>
+                    <input type="text" id="author" name="author" required value="<%= blog.author %>">
+                    <label for="content"> Blog content</label>
+                    <textarea id="content" cols="30" rows="10" name="content"> <%= blog.content %> </textarea>
+                    <button> Edit </button>
+                </form>
+            </div>
+    </body>
+
+</html>

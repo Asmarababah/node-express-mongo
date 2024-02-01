@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include ('../partials/head.ejs') %>
+    <link rel="stylesheet" href="../app.css">
+
+
+    <body>
+        <%- include('../partials/nav.ejs') %>
+            <div class="blogs-style">
+                <% blogs.forEach(blog=> { %>
+                    <div class="one-blog">
+                        <h2>
+                            <%= blog.title %>
+                        </h2>
+                        <h5 style="padding-bottom: 20px;">
+                            By: <%= blog.author %>
+                        </h5>
+                        <hr>
+                        <p>
+                            <!-- <%= blog.content %> -->
+
+                            <a class="see-more" href="getById/<%=blog.id%>"> Click here to read Content </a>
+                        </p>
+                    </div>
+                    <% }); %>
+            </div>
+    </body>
+
+</html>

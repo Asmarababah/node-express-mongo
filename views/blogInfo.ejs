@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="../app.css">
+
+<!-- <%- include ('../partials/head.ejs') %> -->
+
+
+<body>
+    <%- include('../partials/nav.ejs') %>
+
+        <div class="details">
+            <h1>
+                <%= blog.title %>
+            </h1>
+
+            <h5>
+                <%= blog.author %>
+            </h5>
+
+            <p>
+                <%= blog.content %>
+            </p>
+            <div class="buttons">
+                <button class="button"><a href="/blogs/delete-blog/<%=blog.id%>"> Delete Blog</a> </button>
+                <button class="button"> <a href="/view-blog/<%=blog.id%>"> Edit Blog</a> </button>
+            </div>
+        </div>
+</body>
+
+</html>
